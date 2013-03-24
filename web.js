@@ -1,4 +1,4 @@
-var port = process.env.PORT || 80;
+var port = Number(process.env.PORT) || 80;
 var io = require('socket.io').listen(port);
 
 io.sockets.on('connection', function (socket) {
