@@ -1,7 +1,5 @@
-var io = require('socket.io');
-
 var port = process.env.PORT || 80;
-io.listen(port);
+var io = require('socket.io').listen(port);
 
 io.sockets.on('connection', function (socket) {
   socket.emit('news', { hello: 'world' });
